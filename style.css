@@ -1,0 +1,151 @@
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  background: #f1f4f2;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0 0 28px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+}
+
+/* ---------- Formulario ---------- */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid #d9dedb;
+  border-radius: 10px;
+  background: #fff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder { color: #777; }
+
+input:focus {
+  border-color: #2f6b5a;
+  box-shadow: 0 0 0 3px rgba(47, 107, 90, 0.15);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+#btn-agregar {
+  align-self: flex-start;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: #2f6b5a;
+  border: none;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+#btn-agregar:hover { background: #255649; }
+
+/* ---------- Lista de contactos ---------- */
+.lista {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 4px;
+  border-bottom: 1px solid #eceeed;
+}
+
+.contacto:last-child { border-bottom: none; }
+
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contacto-nombre {
+  font-weight: 700;
+  color: #1a1a1a;
+  overflow-wrap: anywhere;
+}
+
+.contacto-telefono {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.btn-eliminar {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b3372f;
+  background: #fff;
+  border: 1px solid #e7c4c1;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.btn-eliminar:hover { background: #fbeceb; }
+
+/* ---------- Mensaje vacío y pie ---------- */
+.vacio {
+  text-align: center;
+  color: #777;
+  margin: 40px 0;
+}
+
+.oculto { display: none; }
+
+.pie {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e8e6;
+}
+
+.pie p {
+  margin: 0;
+  font-weight: 700;
+  color: #555;
+}
+
+@media (max-width: 480px) {
+  .tarjeta { padding: 24px; }
+  h1 { font-size: 1.6rem; }
+}
